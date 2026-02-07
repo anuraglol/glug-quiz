@@ -76,7 +76,7 @@ export function SignInClient() {
         </CardContent>
       </Card>
 
-      <p className="bottom-4 absolute font-medium">
+      <p className="bottom-4 absolute font-medium text-center">
         - built by anurag, for the glug auditions {`<3`}
       </p>
     </div>
