@@ -11,6 +11,12 @@ export function SignInClient() {
 
   return (
     <div className="min-h-screen flex flex-col gap-6 items-center justify-center p-4">
+      <p className="text-sm text-center">
+        welcome stranger :p <br />
+        this is a harry potter quiz app built using nextjs. you must prove your wizarding knowledge
+        in order to gain access to the forbidden library of quizzes. click the button below to sign
+        in with your google account and embark on your magical journey!
+      </p>
       <Card className="max-w-md w-full">
         <CardHeader>
           <CardTitle className="text-lg md:text-xl">Sign In</CardTitle>
@@ -70,7 +76,9 @@ export function SignInClient() {
         </CardContent>
       </Card>
 
-      <p className="bottom-4 absolute font-medium">- built by anurag</p>
+      <p className="bottom-4 absolute font-medium">
+        - built by anurag, for the glug auditions {`<3`}
+      </p>
     </div>
   );
 }
