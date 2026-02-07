@@ -94,7 +94,6 @@ export function QuizClient() {
     } catch (err) {
       setError(err instanceof Error ? err.message : "Failed to submit");
     } finally {
-      setSubmitting(false);
     }
   };
 

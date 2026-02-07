@@ -10,7 +10,7 @@ export function SignInClient() {
   const [loading, setLoading] = useState(false);
 
   return (
-    <div className="min-h-screen flex items-center justify-center p-4">
+    <div className="min-h-screen flex flex-col gap-6 items-center justify-center p-4">
       <Card className="max-w-md w-full">
         <CardHeader>
           <CardTitle className="text-lg md:text-xl">Sign In</CardTitle>
@@ -69,6 +69,8 @@ export function SignInClient() {
           </div>
         </CardContent>
       </Card>
+
+      <p className="bottom-4 absolute font-medium">- built by anurag</p>
     </div>
   );
 }
