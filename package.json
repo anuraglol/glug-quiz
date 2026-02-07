@@ -1,0 +1,42 @@
+{
+  "name": "quiz",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "apps/*",
+      "packages/*"
+    ],
+    "catalog": {
+      "dotenv": "^17.2.2",
+      "zod": "^4.1.13",
+      "typescript": "^5",
+      "better-auth": "^1.4.18"
+    }
+  },
+  "type": "module",
+  "scripts": {
+    "dev": "bun run --filter '*' dev",
+    "build": "bun run --filter '*' build",
+    "check-types": "bun run --filter '*' check-types",
+    "dev:native": "bun run --filter native dev",
+    "dev:web": "bun run --filter web dev",
+    "db:push": "bun run --filter @quiz/db db:push",
+    "db:studio": "bun run --filter @quiz/db db:studio",
+    "db:generate": "bun run --filter @quiz/db db:generate",
+    "db:migrate": "bun run --filter @quiz/db db:migrate",
+    "check": "oxlint && oxfmt --write"
+  },
+  "dependencies": {
+    "@quiz/env": "workspace:*",
+    "dotenv": "catalog:",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@quiz/config": "workspace:*",
+    "@types/node": "^22.13.14",
+    "oxfmt": "^0.26.0",
+    "oxlint": "^1.41.0",
+    "typescript": "catalog:"
+  },
+  "packageManager": "bun@1.3.2"
+}

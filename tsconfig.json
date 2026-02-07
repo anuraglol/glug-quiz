@@ -1,0 +1,3 @@
+{
+  "extends": "@quiz/config/tsconfig.base.json"
+}

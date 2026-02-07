@@ -1,0 +1,24 @@
+{
+  "name": "@quiz/auth",
+  "type": "module",
+  "exports": {
+    ".": {
+      "default": "./src/index.ts"
+    },
+    "./*": {
+      "default": "./src/*.ts"
+    }
+  },
+  "scripts": {},
+  "dependencies": {
+    "@quiz/db": "workspace:*",
+    "@quiz/env": "workspace:*",
+    "better-auth": "catalog:",
+    "dotenv": "catalog:",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@quiz/config": "workspace:*",
+    "typescript": "catalog:"
+  }
+}
