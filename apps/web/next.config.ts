@@ -1,4 +1,4 @@
-import "@quiz/env/web";
+import "@/lib/env/client";
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {

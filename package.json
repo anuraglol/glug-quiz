@@ -20,14 +20,13 @@
     "check-types": "bun run --filter '*' check-types",
     "dev:native": "bun run --filter native dev",
     "dev:web": "bun run --filter web dev",
-    "db:push": "bun run --filter @quiz/db db:push",
-    "db:studio": "bun run --filter @quiz/db db:studio",
-    "db:generate": "bun run --filter @quiz/db db:generate",
-    "db:migrate": "bun run --filter @quiz/db db:migrate",
+    "db:push": "bun run --filter web db:push",
+    "db:studio": "bun run --filter web db:studio",
+    "db:generate": "bun run --filter web db:generate",
+    "db:migrate": "bun run --filter web db:migrate",
     "check": "oxlint && oxfmt --write"
   },
   "dependencies": {
-    "@quiz/env": "workspace:*",
     "dotenv": "catalog:",
     "zod": "catalog:"
   },

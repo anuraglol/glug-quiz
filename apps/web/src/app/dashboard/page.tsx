@@ -1,25 +1,19 @@
-import { auth } from "@quiz/auth";
-import { headers } from "next/headers";
 import { redirect } from "next/navigation";
+import { auth } from "@/lib/auth";
+import { headers } from "next/headers";
+import { getQuizStatus } from "@/lib/api/quiz";
+import { DashboardClient } from "./dashboard";
 
-import { authClient } from "@/lib/auth-client";
-
-import Dashboard from "./dashboard";
-
-export default async function DashboardPage() {
+export default async function Page() {
   const session = await auth.api.getSession({
     headers: await headers(),
   });
 
-  if (!session?.user) {
-    redirect("/login");
+  if (!session) {
+    redirect("/");
   }
 
-  return (
-    <div>
-      <h1>Dashboard</h1>
-      <p>Welcome {session.user.name}</p>
-      <Dashboard session={session} />
-    </div>
-  );
+  const quizStatus = await getQuizStatus(session.user);
+
+  return <DashboardClient quizStatus={quizStatus} session={session} />;
 }
